@@ -21,9 +21,6 @@ const Navbar = () => {
                                 <Link to="/payment" className="block py-2 pl-3 pr-4 rounded md:p-0 " aria-current="page">Payment</Link>
                             </li>
                             <li>
-                                <Link to="/categories" className="block py-2 pl-3 pr-4 rounded md:p-0 " aria-current="page">Categories</Link>
-                            </li>
-                            <li>
                                 <Link to="/login" className="block py-2 pl-3 pr-4 rounded md:p-0 " aria-current="page">Sign up</Link>
                             </li>
                         </ul>
