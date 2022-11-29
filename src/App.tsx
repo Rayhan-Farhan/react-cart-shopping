@@ -6,10 +6,12 @@ import Payment from './pages/Payment'
 import Store from './pages/Store'
 import Navbar from './components/Navbar'
 import Customers from './pages/Customers'
+import { CartProvider } from './context/CartContext'
 
 function App() {
   return (
     <>
+    <CartProvider>
     <Navbar/>
     <Routes>
       <Route path='/' element={<Home/>}/>
@@ -19,6 +21,7 @@ function App() {
       <Route path='/categories' element={<Categories/>}/>
       <Route path='/login' element={<Login/>}/>
     </Routes>
+    </CartProvider>
     </>
   )
 }
