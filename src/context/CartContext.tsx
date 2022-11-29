@@ -1,4 +1,5 @@
 import { createContext, ReactNode, useContext, useState } from "react";
+import Cart from "../components/Cart";
 
 type CartProviderProps = {
     children: ReactNode
@@ -14,6 +15,7 @@ type CartContext = {
     increaseCart: (id:number) => void
     decreaseCart: (id:number) => void
     removeCart: (id:number) => void
+    cartItems: CartItem[]
 
 }
 
@@ -70,10 +72,8 @@ export function CartProvider({children}:CartProviderProps){
     }
 
 
-
-
-
-    return <CartContext.Provider value={{getItemQuantity, increaseCart, decreaseCart, removeCart}}>
+    return <CartContext.Provider value={{getItemQuantity, increaseCart, decreaseCart, removeCart, cartItems}}>
         {children}
+        <Cart/>
     </CartContext.Provider>
 }
