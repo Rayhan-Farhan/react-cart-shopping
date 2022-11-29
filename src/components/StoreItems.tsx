@@ -1,7 +1,7 @@
 import React from "react";
 import { useCart } from "../context/CartContext";
 import { formatCur } from "../utils/formatter";
-
+// Props for the Store Items from the JSON data is being defined here
 type StoreItemProps = {
   id: number;
   name: string;
@@ -9,6 +9,8 @@ type StoreItemProps = {
 };
 
 const StoreItems = ({ id, name, price }: StoreItemProps) => {
+  // We are using contextAPI to use the functions for fetching the product id, incresase & decerease items as well as to remove the item
+  // The designated id is stored and then we can modify that item based on the item by increasing, decreasing or removing
   const { getItemQuantity, increaseCart, decreaseCart, removeCart } = useCart();
   const items = getItemQuantity(id);
   return (
@@ -24,6 +26,7 @@ const StoreItems = ({ id, name, price }: StoreItemProps) => {
           aspernatur quisquam officiis!
         </p>
         <p className="mb-3 font-normal">
+          {/* Formatter is a utility function used to format our currency, this can be found in the utils folder */}
           Price: <span className="text-gray-700">{formatCur(price)}</span>
         </p>
         {items === 0 ? (

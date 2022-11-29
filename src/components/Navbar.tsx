@@ -4,6 +4,7 @@ import { Outlet, Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
+    {/* We are using outlet to render our child component and links for navigation */}
       <nav className="shadow-md bg-white border-gray-300">
         <div className="container flex flex-wrap items-center justify-between mx-auto ">
           <Link to="/" className="flex items-center">

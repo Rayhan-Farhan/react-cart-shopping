@@ -1,15 +1,18 @@
 import { createContext, ReactNode, useContext, useState } from "react";
 import Cart from "../components/Cart";
 
+//React node is the definition for our child props for the context
 type CartProviderProps = {
   children: ReactNode;
 };
 
+//Cart items getting defined here
 type CartItem = {
   id: number;
   quantity: number;
 };
 
+//We need to define the context as to what needs to be functionated when using the functions
 type CartContext = {
   getItemQuantity: (id: number) => number;
   increaseCart: (id: number) => void;

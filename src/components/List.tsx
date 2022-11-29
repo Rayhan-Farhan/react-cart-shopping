@@ -7,6 +7,7 @@ const List = () => {
       <div className="text-3xl text-center font-semibold underline mb-5 mt-5">
         Customer
       </div>
+      {/* Fetching the customer data from the json data */}
       {Customers &&
         Customers.map((item) => {
           return (

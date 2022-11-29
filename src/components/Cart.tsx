@@ -7,6 +7,7 @@ const Cart = () => {
   return (
     <>
       <div>
+        {/* Fetching cart items from the context */}
         {cartItems &&
           cartItems.map((item) => <CartItems key={item.id} {...item} />)}
       </div>
